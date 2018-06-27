@@ -2,15 +2,29 @@ const REDDIT_END = 'https://www.reddit.com/search.json';
 const YOUTUBE_END = 'https://www.googleapis.com/youtube/v3/search'
 
 function listenForSubmit(){
-		$('.js-search-form').submit(event => {
+	$('.js-search-form').submit(event => {
 		event.preventDefault();
 		const queryTarget = $(event.currentTarget).find('.js-query');
 		const query = queryTarget.val();
 		queryTarget.val("");
 		getRedditApiData(query, displayRedditResults);
 		getYoutubeApiData(query, displayTubeResults);
+		$.preloaderDo();
+
 	})
 
+}
+
+$.preloaderDo = function(){
+  $('.toSlide').toggleClass('open');
+  goBackPls();
+}
+
+function goBackPls() {
+	$('.toSlide').on('click', 'button', event => {
+		$.preloaderDo();
+	});
+	console.log('goBackPls ran');
 }
 
 function getRedditApiData(searchTerm, callback){
@@ -39,7 +53,8 @@ function getYoutubeApiData(searchTerm, callback){
 		},
 		dataType: 'JSON',
 		type: 'GET',
-		success: callback	};
+		success: callback	
+	};
 
 	$.ajax(settings);
 	console.log('getYoutubeApiData ran');
@@ -85,4 +100,9 @@ function renderTubeResults(result){
   	`;
 }
 
+
+
 $(listenForSubmit);
+
+
+

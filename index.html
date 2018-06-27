@@ -3,25 +3,44 @@
 <head>
 	<title>YEET</title>
 	<meta name="description" content="A place to discover what the hype is.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:100" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<header>YEET</header>
-
-	<h1>Let's catch up on the Culture.</h1>
+	<header role="banner">
+		<img src=https://farm2.staticflickr.com/1777/42961445242_5cee679023_o.png">
+		<div id="langcont">
+			<span>新しいスタイル</span>
+			<span>New Style</span>
+			<span>أسلوب جديد</span>
+			<span>Ny stil</span>
+			<span>新风格</span>
+		</div>
+	</header>
 
 	<main role="main">
-	<form action="#" name="search-form" class="js-search-form">
-		<label for="query"></label>
-		<input placeholder="esketit..." name="search" class="js-query">
-		<button type="submit">Search</button>
-	</form>
+		<h1>Let's get you up to speed.</h1>
+		<form action="#" name="search-form" class="js-search-form" autocomplete="off">
+			<label for="query"></label>
+			<input type="text" placeholder="Search..." name="search" class="js-query">
+			<button type="submit">Search</button>
+		</form>
 
-	<h2>Reddit</h2>
-	<section class="reddit-Results"></section>
-	<h2>Youtube</h2>
-	<section class="youtube-Results"></section>
 
+		<section class="toSlide fromRight">
+			<button type="button" id="backButton">Go Back</button>
+			<div class="resultbox-left">
+				<h2><!--Reddit--></h2>
+				<section class="reddit-Results"></section>
+			</div>
+			<div class="resultbox-right">
+				<h2><!--Youtube--></h2>
+				<section class="youtube-Results"></section>
+			</div>
+		</section>
+	</main>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.js"
