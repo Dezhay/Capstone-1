@@ -50,6 +50,7 @@ function getYoutubeApiData(searchTerm, callback){
 			q:`${searchTerm}`,
 			part: `snippet`,
 			key: `AIzaSyDRN8SRnzCVqZ2NQDYMsIMul_rMBPODfGg`,
+			maxResults: '25',
 		},
 		dataType: 'JSON',
 		type: 'GET',

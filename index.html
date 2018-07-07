@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>YEET</title>
+	<title>Culture Boost</title>
 	<meta name="description" content="A place to discover what the hype is.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css" rel="stylesheet">
@@ -17,11 +17,13 @@
 			<span>أسلوب جديد</span>
 			<span>Ny stil</span>
 			<span>新风格</span>
+			<span>nouveau style</span>	
+			<span>새로운 스타일</span>
 		</div>
 	</header>
 
 	<main role="main">
-		<h1>Let's get you up to speed.</h1>
+		<h1>A place to research the hype.</h1>
 		<form action="#" name="search-form" class="js-search-form" autocomplete="off">
 			<label for="query"></label>
 			<input type="text" placeholder="Search..." name="search" class="js-query">
@@ -31,13 +33,21 @@
 
 		<section class="toSlide fromRight">
 			<button type="button" id="backButton">Go Back</button>
-			<div class="resultbox-left">
-				<h2><!--Reddit--></h2>
-				<section class="reddit-Results"></section>
-			</div>
-			<div class="resultbox-right">
-				<h2><!--Youtube--></h2>
-				<section class="youtube-Results"></section>
+			<div class="mainbox wrap">
+				<div class="resultbox-wrap-left">
+					<div class="resultbox left">
+						<h2>Reddit Results:</h2>
+						<section class="reddit-Results"></section>
+					</div>
+					<div class="cover-bar"></div>
+				</div>
+				<div class="resultbox-wrap-right">
+					<div class="resultbox right">
+						<h2>YouTube Results:</h2>
+						<section class="youtube-Results"></section>
+					</div>
+					<div class="cover-bar"></div>
+				</div>
 			</div>
 		</section>
 	</main>

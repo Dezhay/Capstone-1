@@ -1,4 +1,6 @@
- /*salmon font-color: #f5b7b7*/
+ /*salmon font-color: #f5b7b7
+original blue: background-color: #3f51b5;;
+ */
 
 * { 
 	box-sizing: border-box;
@@ -13,7 +15,7 @@ header {
 	margin-left: auto;
 	padding: 0px;
 	width: 100%;
-	padding: 30px 30px 15px 60px;
+	padding: 30px 30px 15px 30px;
 	text-align: left;
 }
 
@@ -24,6 +26,7 @@ header img {
 	min-height: 150px;
 	max-height: 240px;
 	max-width: 330px;
+	padding-top: 30px;
 
 	border-top: 1px solid #8f9091;
 
@@ -31,7 +34,7 @@ header img {
 
 header div {
 	padding-top: 30px;
-	display: block;
+	display: inline-block;
 	float: right;
 	color: #ff5252;
 	font-weight: 100;
@@ -52,66 +55,78 @@ h1 {
 	border-top: 1px solid #8f9091;
 	padding: 30px;
 	padding-left: 0px;
+	padding-right: 0px;
 	font-color: white;
+	text-align: center;
+	font-size: 7vw;
 }
 
 body {
 	display: block;
+	margin-top: 30px;
 	margin-right: auto;
 	margin-left: auto;
-	background-color: #3f51b5;
-	
-	height: 100%;
+	background-image: url("https://farm2.staticflickr.com/1782/28376913247_68d4f2d29e_o.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed:;
+	background-position: left top;
+	height: 100vh;
 	width: 100%;
 }
 
 main {
 	padding: 0px 30px 30px 30px;
 	color: white;
+	display: block;
 }
 
-form {
-  
-  display: block;
-  position: relative;
+form {  
+  display: inline-block;
   height: 60px;
-  float: left;
-  padding: 0;
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  text-align: center;
 }
 
 form input {
+  min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing:border-box;
   height: 60px;
-  font-size: 55px;
+  font-size: 60px;
   display: inline-block;
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   border: none;
   outline: none;
   color: #ff5252;
-  padding: 3px;
-  padding-left: 60px;
-  width: 400px;
+  padding: 30px;
   position: absolute;
   top: 0;
   left: 0;
   background: none;
-  z-index: 3;
   transition: width 4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
   cursor: pointer;
   border-bottom: 1px solid #8f9091;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 form button{
  text-indent: -10000px;
- font-size: 6em; /* This controls the size. */
+ font-size: 6em; 
  display: block;
  width: 0.4em;
  height: 0.4em;
  border: 0.045em solid #ff5252;
  position: relative;
  border-radius: 0.20em;
- background-color: #3f51b5;
+ background-color: transparent;
  cursor: pointer;
 }
 
@@ -132,11 +147,48 @@ form button::before
       -o-transform: rotate(45deg);
 }
 
+/*SLIDE STYLES*/
+
+section button {
+	/*background: #5697ff;
+	border: none; 
+	color: #fff;
+	font-size: 2em;
+	text-decoration: none;
+	display: block;
+	width: 40%;
+	margin: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 8px;*/
+
+	box-sizing: border-box;
+	font-weight: 700;
+	background-color: #DCDCDC;
+	color: #b0b0b0;
+	padding: 16px 32px 16px 32px;
+	border-color: #b0b0b0;
+	display: inline;
+	cursor: pointer;
+	text-transform:  uppercase;
+	letter-spacing: .2rem;
+	background color: rgb(220, 220, 220);
+	margin: 0 0 0 0;
+	border: none;
+	margin: 30px;
+}
+
+section button:hover {
+	background-color: #000000;
+	color: #fff;
+}
+
 .toSlide {
+	text-align: center;
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background: #ff5252;
+	background: #fff;
 	color: #fff;
 	z-index: 900;
 	-webkit-transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
@@ -146,6 +198,7 @@ form button::before
 .toSlide.fromRight{
 	top: 0px;
     right: -100%;
+    display: block;
 }
 
 .toSlide.fromRight.open{
@@ -157,9 +210,163 @@ form button::before
 .reddit-Results {
 	float: left;
 	color: white;
+	width: 100%;
 }
 
 .youtube-Results {
 	float: right;
 	color: white;
+}
+
+.mainboxwrap {
+	border-top: 1px solid #8f9091;
+	padding: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	height: 100%;
+}
+
+/*SLIDE SCROLLBOX*/
+
+.toSlide {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-image: url("https://farm2.staticflickr.com/1782/41436512890_353aaab0c5_o.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed:;
+  background-position: left top;
+}
+.toSlide::-webkit-scrollbar {
+  width: .4em; 
+}
+.toSlide::-webkit-scrollbar,
+.toSlide::-webkit-scrollbar-thumb {
+  overflow:visible;
+
+}
+.toSlide::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.2); 
+}
+.cover-bar {
+  position: absolute;
+  background: #ff5252;
+  height: 100%;  
+  top: 0;
+  right: 0;
+  width: .4em;
+  -webkit-transition: all .5s;
+  opacity: 1;
+}
+
+.scroll-bar-wrap:hover .cover-bar {
+   opacity: 0;
+  -webkit-transition: all .5s;
+}
+
+/*SCROLL BOX STYLES*/
+
+.resultbox-wrap .left {
+  display: block;
+  width: 85%;
+  height: 50%;
+  position: absolute;
+  margin: 2em left;
+}
+.resultbox-wrap .right {
+  display: block;
+  width: 85%;
+  height: 50%;
+
+  margin: 2em right;
+}
+.resultbox {
+  display: block;
+  margin: auto;
+  width: 85%;
+  height: 700px;
+  overflow-y: scroll;
+  background: #fff;
+  border-radius: 4%;
+}
+.resultbox::-webkit-scrollbar {
+  width: .4em; 
+}
+.resultbox::-webkit-scrollbar,
+.resultbox::-webkit-scrollbar-thumb {
+  overflow:visible;
+  border-radius: 4px;
+}
+.resultbox::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.2); 
+}
+.cover-bar {
+  position: absolute;
+  background: transparent;
+  height: 100%;  
+  top: 0;
+  right: 0;
+  width: .4em;
+  -webkit-transition: all .5s;
+  opacity: 1;
+}
+
+.scroll-bar-wrap:hover .cover-bar {
+   opacity: 0;
+  -webkit-transition: all .5s;
+}
+
+/*REDDIT JSON RETURN STYLE*/
+
+.reddit-Results p{
+	text-align: left;
+	
+}
+
+/*YOUTUBE JSON RETURN STYLE*/
+
+/*MAKE RESPONSIVE*/
+
+@media screen and (max-width: 600px){
+
+	header img { 
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+
+	padding-bottom: 30px;
+	}
+
+	header div {
+	padding-top: 30px;
+	display: inline-block;
+	float: none;
+	text-align: center;
+	width: 100%;
+	border-top: 1px solid #8f9091;
+	margin-right: auto;
+	margin-left: auto;
+    }
+
+	#langcont span {
+		display: block;
+	}
+
+	form {
+	float: left;
+	}
+
+	form input {
+		font-size: 40px;
+		width: 87vw;
+	}
+
+	body {
+		margin-top: 0px;
+	}
+
+}
+
 }
