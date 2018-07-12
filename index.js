@@ -81,21 +81,26 @@ function displayTubeResults(data){
 
 function renderRedditResults(result){
 	return `
-	<p> 
-     <a target="_blank" href="https://www.reddit.com/${result.data.permalink}">
-     <span class="js-search-data">${result.data.title}</span>
-     </a>
-     </p> 
+	<p class="redditcells">
+	    <a target="_blank" href="https://www.reddit.com/${result.data.permalink}">
+	    <span class="js-search-data">${result.data.title}</span>
+	    </a>
+	    <br>
+	    <span class="ups">upvotes:${result.data.ups} · </span>
+	  	<span class="sub">Subreddit:${result.data.subreddit_name_prefixed}</span>
+    </p> 
      
 	`;
 }
 
 function renderTubeResults(result){
 	return `
-	<p> 
+	<p class="youtubecells"> 
     <a target="_blank" href="https://www.youtube.com/watch?v=${result.id.videoId}">
+    <img src="${result.snippet.thumbnails.high.url}">
     <span class="js-search-data">${result.snippet.title}</span>
-    <img src="${result.snippet.thumbnails.default.url}">
+    <span class="channel">${result.snippet.channelTitle}</span>
+    <span></span>
     </a>
     </p> 
   	`;

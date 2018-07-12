@@ -61,12 +61,22 @@ h1 {
 	font-size: 7vw;
 }
 
+h2{
+	color: #000;
+	//color: #ff5252;
+	text-align: left;
+	letter-spacing: 3.2px;
+	text-transform: uppercase;
+	font-size: 23px;
+}
+
 body {
 	display: block;
 	margin-top: 30px;
 	margin-right: auto;
 	margin-left: auto;
-	background-image: url("https://farm2.staticflickr.com/1782/28376913247_68d4f2d29e_o.jpg");
+	/*background-image: url("https://farm2.staticflickr.com/1782/28376913247_68d4f2d29e_o.jpg");*/
+	background-image: url("https://farm1.staticflickr.com/923/41520642050_38d440dd47_o.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed:;
@@ -213,11 +223,6 @@ section button:hover {
 	width: 100%;
 }
 
-.youtube-Results {
-	float: right;
-	color: white;
-}
-
 .mainboxwrap {
 	border-top: 1px solid #8f9091;
 	padding: 30px;
@@ -326,6 +331,87 @@ section button:hover {
 }
 
 /*YOUTUBE JSON RETURN STYLE*/
+
+
+.redditcells {
+	text-align: left;
+	border-bottom: 1px solid #8f9091;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.redditcells span {
+	display: inline-block;
+}
+
+.containpostdata {
+	text-align: left;
+	display: block;
+	padding: 5px;
+}
+
+.js-search-data {
+	font-weight: bolder;
+	color: #434547;
+	font-size: 14px;
+}
+
+.sub {
+	color: #434547;
+	font-style: italic;
+	font-size: 12px;
+} 
+
+.ups {
+	color: #8f9091;
+	font-size: 12px;
+}
+
+.youtubecells {
+	display: inline-block;
+}
+
+.js-search-data {
+	color: #000;
+	text-decoration: none;
+	font-weight: bolder;
+	display: block;
+	width: 186px;
+	height: 32px;
+	text-align: left;
+	line-height: 16px;
+	max-height: 32px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+a {
+	text-decoration: none;
+}
+
+a img {
+	height: 117.500px;
+	width: 210px;
+	display: inline-block;
+}
+
+.youtubetextbox {
+	padding-top: 5px;
+	padding-right: 24px;
+}
+
+a div {
+	margin: 0px;
+	display: inline-block;
+	position: absolute;
+}
+
+.channel {
+	color: #8f9091;
+	text-align: left;
+	display: block;
+}
+
 
 /*MAKE RESPONSIVE*/
 
