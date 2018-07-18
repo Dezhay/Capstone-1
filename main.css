@@ -1,7 +1,3 @@
- /*salmon font-color: #f5b7b7
-original blue: background-color: #3f51b5;;
- */
-
 * { 
 	box-sizing: border-box;
 	font-family: 'Open Sans', sans-serif;
@@ -76,7 +72,6 @@ body {
 	margin-top: 30px;
 	margin-right: auto;
 	margin-left: auto;
-	/*background-image: url("https://farm2.staticflickr.com/1782/28376913247_68d4f2d29e_o.jpg");*/
 	background-image: url("https://farm1.staticflickr.com/923/41520642050_38d440dd47_o.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -161,18 +156,6 @@ form button::before
 /*SLIDE STYLES*/
 
 section button {
-	/*background: #5697ff;
-	border: none; 
-	color: #fff;
-	font-size: 2em;
-	text-decoration: none;
-	display: block;
-	width: 40%;
-	margin: 30px;
-	margin-right: auto;
-	margin-left: auto;
-	border-radius: 8px;*/
-
 	box-sizing: border-box;
 	font-weight: 700;
 	background-color: #DCDCDC;

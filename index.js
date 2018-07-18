@@ -24,7 +24,6 @@ function goBackPls() {
 	$('.toSlide').on('click', 'button', event => {
 		$.preloaderDo();
 	});
-	console.log('goBackPls ran');
 }
 
 function getRedditApiData(searchTerm, callback){
@@ -33,14 +32,10 @@ function getRedditApiData(searchTerm, callback){
 		data: {
 			q:`${searchTerm}`,
 		},
-		//.dataType: 'JSON',
 		type: 'GET',
 		success: callback
 	};
 	$.ajax(settings);
-	console.log('getRedditApiData ran');
-	console.log(searchTerm);
-
 }
 
 function getYoutubeApiData(searchTerm, callback){
@@ -67,7 +62,6 @@ function displayRedditResults(data){
 	);
 	$('.reddit-Results').html(results)
 
-	console.log(data);
 }
 
 function displayTubeResults(data){
@@ -75,8 +69,6 @@ function displayTubeResults(data){
 		renderTubeResults(item)
 	);
 	$('.youtube-Results').html(results)
-	console.log(data);
-	console.log('displayTubeResults ran');
 }
 
 function renderRedditResults(result){
