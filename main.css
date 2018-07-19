@@ -57,14 +57,26 @@ h1 {
 	font-size: 7vw;
 }
 
-h2{
+h2 {
 	color: #000;
 	//color: #ff5252;
 	text-align: left;
 	letter-spacing: 3.2px;
 	text-transform: uppercase;
 	font-size: 23px;
-	padding-left: 5px;
+	padding-left: 12px;
+}
+
+h3 {
+	font-style: italic;
+	font-weight: lighter;
+	border-top: 1px solid #8f9091;
+	padding: 30px;
+	padding-left: 0px;
+	padding-right: 0px;
+	font-color: white;
+	text-align: center;
+	font-size: 3vw;
 }
 
 body {
@@ -321,7 +333,7 @@ section button:hover {
 	border-bottom: 1px solid #8f9091;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: 5px;
+	padding-left: 10px;
 }
 
 .redditcells span {
